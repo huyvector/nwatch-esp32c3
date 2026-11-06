@@ -56,6 +56,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 nav { display: flex; gap: 32px; }
 nav a, .github-link { color: var(--muted); font: 12px var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; transition: color .2s; }
 nav a:hover, .github-link:hover { color: var(--lime); }
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.language-toggle { padding: 9px 12px; border: 1px solid var(--line); background: transparent; color: var(--lime); font: 12px var(--mono); cursor: pointer; white-space: nowrap; }
+.language-toggle span { color: var(--muted); }
+.language-toggle:hover, .language-toggle:focus-visible { border-color: var(--lime); }
+.source-download { margin: -6px 30px 16px; text-align: center; font-size: 12px; }
+.source-download a { color: var(--muted); text-underline-offset: 4px; }
+.source-download a:hover { color: var(--lime); }
+.install-safety { margin: 0 30px 22px; color: var(--muted); font-size: 12px; }
 
 .hero { min-height: 730px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 56px; padding-block: 84px 70px; }
 .eyebrow { margin: 0 0 22px; color: var(--muted); font: 11px var(--mono); letter-spacing: .16em; }
@@ -190,6 +198,9 @@ footer { border-top: 1px solid var(--line); }
   .site-header { height: 64px; padding-inline: 15px; }
   nav { display: none; }
   .github-link { font-size: 10px; }
+  .header-actions { gap: 10px; }
+  .language-toggle { padding: 8px; font-size: 10px; }
+  .source-download, .install-safety { margin-inline: 22px; }
   .hero { min-height: auto; gap: 20px; padding-block: 35px 65px; }
   .watch-stage { height: 350px; transform: scale(.82); margin-inline: -40px; }
   h1 { font-size: 51px; }
