@@ -12,6 +12,7 @@ const html = fs.readFileSync(path.join(root,'index.html'),'utf8');
 for (const [,key] of html.matchAll(/data-i18n(?:-aria)?="([^"]+)"/g)) assert.ok(english[key], `Missing English: ${key}`);
 assert.equal((html.match(/download data-i18n="sourceDownload"/g)||[]).length,1);
 assert.ok(!html.includes('id="source"'));
+for (const asset of ['app.js?v=6.7.2','styles.css?v=6.7.2','manifest.json?v=6.7.2']) assert.ok(html.includes(asset), `Missing cache version: ${asset}`);
 assert.ok(html.indexOf('class="source-download"') > html.indexOf('</esp-web-install-button>'));
 const manifest = JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
 assert.equal(manifest.version,'6.7.2');

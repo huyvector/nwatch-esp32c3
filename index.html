@@ -5,9 +5,9 @@
   <meta name="theme-color" content="#050806" />
   <meta name="description" content="NWatch ESP32-C3: nạp ROM bằng trình duyệt, giao diện OLED và thông báo iPhone ANCS." />
   <title>NWatch C3 — Web Installer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=6.7.2" />
   <script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js?module"></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=6.7.2" defer></script>
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -53,7 +53,7 @@
           <li><span>02</span><p data-i18n="step2"><strong>Chọn cổng USB</strong>Nhấn nút bên dưới và chọn cổng USB/JTAG hoặc ESP32.</p></li>
           <li><span>03</span><p data-i18n="step3"><strong>Cài đặt NWatch</strong>Không chọn “Erase device” để giữ cài đặt/ghép đôi. Chờ xác minh hoàn tất rồi nhấn RESET một lần.</p></li>
         </ol>
-        <esp-web-install-button manifest="manifest.json">
+        <esp-web-install-button manifest="manifest.json?v=6.7.2">
           <button class="flash-button" slot="activate"><span class="flash-icon" aria-hidden="true">⌁</span><span data-i18n="flashAction">KẾT NỐI &amp; CÀI ROM</span><span class="arrow" aria-hidden="true">→</span></button>
           <div class="unsupported" slot="unsupported" data-i18n="unsupported">Trình duyệt chưa hỗ trợ Web Serial. Hãy dùng Chrome hoặc Edge trên máy tính.</div>
           <div class="unsupported" slot="not-allowed" data-i18n="httpsRequired">Web Serial cần HTTPS. Hãy mở trang GitHub Pages thay vì mở file trực tiếp.</div>
